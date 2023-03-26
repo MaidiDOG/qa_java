@@ -12,8 +12,11 @@ import org.mockito.MockitoAnnotations;
 @RunWith(Parameterized.class)
 public class lionTest {
     private String sex;
-    public lionTest(String sex) {
+    private boolean hasMane;
+
+    public lionTest(String sex, boolean hasMane) {
         this.sex = sex;
+        this.hasMane = hasMane;
     }
     @Before
     public void setup() {
