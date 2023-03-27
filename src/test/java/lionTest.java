@@ -8,6 +8,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
+import static org.junit.Assert.assertEquals;
+
 
 @RunWith(Parameterized.class)
 public class lionTest {
@@ -46,6 +48,13 @@ public class lionTest {
         Lion lion = new Lion(feline, sex);
         lion.getKittens();
         Mockito.verify(feline).getKittens();
+    }
+
+    @Test
+    public void doesHaveManeLionTest() throws Exception {
+        Lion lion = new Lion(feline, sex);
+        boolean actual = lion.doesHaveMane();
+        assertEquals(hasMane, actual);
     }
 
 }

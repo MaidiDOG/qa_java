@@ -5,6 +5,8 @@ import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import static org.junit.Assert.assertEquals;
+
 
 @RunWith(MockitoJUnitRunner.class)
 public class felineTest {
@@ -15,7 +17,7 @@ public class felineTest {
    @Test
     public void gatFamilyFelineTest(){
        Mockito.when(feline.getFamily()).thenReturn("Кошачьи");
-       System.out.println(feline.getFamily());
+       assertEquals("Кошачьи", feline.getFamily());
    }
 
    @Test
